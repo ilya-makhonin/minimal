@@ -1,0 +1,29 @@
+@import "variables/variables";
+
+* {
+  font-family: "Segoe UI Light", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100%;
+  @include flexStructure(column, center);
+}
+
+.wrapper {
+  @include flexStructure(column, center);
+  width: 96%;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@import "header/header";
+@import "content/content";
+@import "footer/footer";

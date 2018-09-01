@@ -1,0 +1,156 @@
+@import "../variables/variables";
+
+// ---------------------------------- HEADER STYLE START ---------------------------------------
+
+.header {
+  width: 1280px;
+  background: $headerBackground;
+  box-sizing: border-box;
+  padding: 22px 126px 16px 161px;
+  @include flexStructure(row, space-between);
+
+  .logo {
+    img {}
+  }
+
+  .header_menu {
+    font-size: 19px;
+    color: $headerMenuColor;
+
+    .header_menu_list {
+
+      .header_menu_item {
+        display: inline-block;
+
+        .header_menu_link {
+          color: $headerMenuColor;
+          text-decoration: none;
+        }
+
+        .header_menu_link:hover {
+          color: black;
+          text-decoration: underline;
+        }
+
+        .header_menu_delimiter {
+          margin: 0 16px;
+        }
+      }
+    }
+
+    .mobile_menu {
+      width: 180px;
+      height: 45px;
+      background: $headerMobileMenuBackground;
+      display: none;
+      list-style: none;
+      position: relative;
+      z-index: 8;
+
+      .mobile_menu_list {
+
+        .mobile_menu_header {
+          width: 180px;
+          text-align: center;
+          font-size: 20px;
+          color: $headerMobileTextColor;
+          box-sizing: border-box;
+          padding-top: 6px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+        }
+
+        .mobile_menu_list_inside {
+          list-style: none;
+          display: none;
+          position: absolute;
+          z-index: 9;
+          top: 45px;
+
+          .header_menu_item {
+            width: 180px;
+            height: 36px;
+            box-sizing: border-box;
+            padding-top: 3px;
+            cursor: pointer;
+
+            .header_menu_link {
+              color: $headerMobileTextColor;
+              font-size: 16px;
+              @include flexStructure(row, center);
+
+            }
+
+            .header_menu_delimiter {
+              display: none;
+            }
+          }
+
+          .header_menu_item:nth-child(1) {
+            background: $headerMobileFirstBackground;
+          }
+
+          .header_menu_item:nth-child(2) {
+            background: $headerMobileSecondBackground;
+          }
+
+          .header_menu_item:nth-child(3) {
+            background: $headerMobileThirdBackground;
+          }
+        }
+
+        .menu_active {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------------ HEADER STYLE END ----------------------------------------
+
+
+@media (min-width: 920px) and (max-width: 1365px) {
+  .header {
+    width: 830px;
+    box-sizing: border-box;
+    padding: 22px 70px;
+  }
+}
+
+@media (min-width: 570px) and (max-width: 919px){
+  .header {
+    width: 500px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 569px) {
+  .header {
+    width: 88%;
+    box-sizing: border-box;
+    padding: 12px 30px;
+
+    .logo {
+      img {
+        width: 140px;
+        height: 42px;
+      }
+    }
+
+    .header_menu {
+      font-size: 15px;
+
+      .header_menu_list {
+        display: none;
+      }
+
+      .mobile_menu {
+        display: block;
+      }
+    }
+  }
+}

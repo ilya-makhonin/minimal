@@ -1,0 +1,340 @@
+@import "../variables/variables";
+
+// ---------------------------------- TABS STYLE START ---------------------------------------
+
+.tabs_top {
+  width: 1280px;
+  height: 539px;
+  position: relative;
+  z-index: 1;
+
+  .wrapperTabsTopList {
+    height: 123px;
+    z-index: 4;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .list_tab_top {
+      @include flexStructure(row, center);
+      list-style: none;
+      width: 119px;
+      height: 123px;
+      cursor: pointer;
+    }
+
+    .list_tab_top:nth-child(1) {
+      background: $tabsTopPhoneBackground;
+    }
+
+    .list_tab_top:nth-child(2) {
+      background: $tabsTopPadBackground;
+    }
+
+    .list_tab_top:nth-child(3) {
+      background: $tabsTopMacBackground;
+    }
+
+    .active_list_top {
+      box-shadow: inset 0 2px 3px 0 #01646c, inset 0 -2px 3px 0 #01646c;
+    }
+  }
+
+  .wrapperTabsTopContent {
+    width: 1280px;
+    position: absolute;
+    z-index: 2;
+    
+    .content_tab_top {
+      width: 1280px;
+      height: 539px;
+      background: url("./../images/top_banner/background.png");
+      box-sizing: border-box;
+      padding: 50px 0 0 188px;
+      
+      .images_product_top {
+        float: left;
+        width: 452px;
+        height: 457px;
+
+        img {}
+      }
+
+      .description_product_top {
+        float: left;
+        color: $tabsTextColor;
+        margin-top: 130px;
+
+        .emblem_product_top {
+          @include flexStructure(row, space-between);
+          width: 160px;
+
+          img {}
+
+          .emblem_text {
+            font-size: 21px;
+            text-transform: uppercase;
+            margin-left: 8px;
+          }
+        }
+
+        .desc_product_top {
+          margin: 52px 0 28px 0;
+
+          .header_product_top {
+            font-size: 39px;
+            text-transform: uppercase;
+          }
+
+          .text_product_top {
+            font-size: 17px;
+          }
+        }
+
+        .btn_product_top {
+          @include buttonTab($tabsTopBtnBackground);
+          @include flexStructure(row, flex-start);
+
+          .btn_top_image {
+            @include buttonImage($tabsTopBasketBackground);
+            @include flexStructure(row, center);
+
+            img {}
+          }
+
+          .btn_top_text {
+
+          }
+        }
+      }
+
+      display: none;
+    }
+
+    .active_tab_top {
+      display: block;
+    }
+  }
+}
+
+// ---------------------------------- TABS STYLE END ---------------------------------------
+
+
+@media (min-width: 1100px) and (max-width: 1323px) {
+  .tabs_top {
+    width: 1060px;
+
+    .wrapperTabsTopContent {
+      width: 1060px;
+      position: absolute;
+      z-index: 2;
+
+      .content_tab_top {
+        width: 1060px;
+        box-sizing: border-box;
+        padding: 50px 0 0 100px;
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) and (max-width: 1099px) {
+  .tabs_top {
+    width: 880px;
+
+    .wrapperTabsTopList {
+
+      .list_tab_top {
+        width: 90px;
+        height: 100px;
+      }
+    }
+
+    .wrapperTabsTopContent {
+      width: 880px;
+
+      .content_tab_top {
+        width: 880px;
+        box-sizing: border-box;
+        padding: 50px 0 0 20px;
+
+        .description_product_top {
+
+          .desc_product_top {
+            margin: 52px 0 28px 0;
+
+            .header_product_top {
+              font-size: 25px;
+            }
+
+            .text_product_top {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 535px) and (max-width: 919px){
+  .tabs_top {
+    width: 499px;
+
+    .wrapperTabsTopList {
+
+      .list_tab_top {
+        width: 90px;
+        height: 100px;
+      }
+    }
+
+    .wrapperTabsTopContent {
+      width: 499px;
+
+      .content_tab_top {
+        width: 499px;
+        box-sizing: border-box;
+        padding: 15px 0 0 110px;
+
+        .images_product_top {
+          float: none;
+          max-width: 270px;
+          max-height: 272px;
+
+          img {
+            width: 270px;
+            height: 272px;
+          }
+        }
+
+        .description_product_top {
+          width: 270px;
+          float: none;
+          margin-top: 20px;
+          @include flexStructure(column, flex-start);
+
+          .emblem_product_top {
+            width: 160px;
+
+            img {
+              width: 42px;
+              height: 42px;
+            }
+
+            .emblem_text {
+              font-size: 16px;
+            }
+          }
+
+          .desc_product_top {
+            margin: 12px 0;
+
+            .header_product_top {
+              font-size: 18px;
+              text-align: center;
+            }
+
+            .text_product_top {
+              font-size: 16px;
+              text-align: center;
+            }
+          }
+
+          .btn_product_top {
+            width: 150px;
+            height: 40px;
+
+            .btn_top_image {
+              width: 50px;
+              height: 40px;
+            }
+
+            .btn_top_text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 534px) {
+  .tabs_top {
+    width: 370px;
+
+    .wrapperTabsTopList {
+      display: none;
+    }
+
+    .wrapperTabsTopContent {
+      width: 360px;
+
+      .content_tab_top {
+        width: 360px;
+        box-sizing: border-box;
+        padding: 20px 0 0 50px;
+
+        .images_product_top {
+          float: none;
+          max-width: 270px;
+          max-height: 272px;
+
+          img {
+            width: 270px;
+            height: 272px;
+          }
+        }
+
+        .description_product_top {
+          width: 270px;
+          float: none;
+          margin-top: 20px;
+          @include flexStructure(column, flex-start);
+
+          .emblem_product_top {
+            width: 160px;
+
+            img {
+              width: 42px;
+              height: 42px;
+            }
+
+            .emblem_text {
+              font-size: 16px;
+            }
+          }
+
+          .desc_product_top {
+            margin: 8px 0;
+
+            .header_product_top {
+              font-size: 18px;
+              text-align: center;
+            }
+
+            .text_product_top {
+              font-size: 16px;
+              text-align: center;
+            }
+          }
+
+          .btn_product_top {
+            width: 150px;
+            height: 40px;
+
+            .btn_top_image {
+              width: 50px;
+              height: 40px;
+            }
+
+            .btn_top_text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../variables/variables";
+
+// ---------------------------------- FOOTER STYLE START ---------------------------------------
+
+.footer {
+  height: 100px;
+  background: $footerBackground;
+  color: $footerTextColor;
+  box-sizing: border-box;
+  padding-top: 32px;
+
+  .copyright {
+    font-size: 23px;
+    text-align: center;
+  }
+}
+
+// ---------------------------------- HEADER STYLE END ---------------------------------------
+
+@media (max-width: 899px) {
+  .footer {
+    padding-top: 4px;
+    height: 50px;
+
+    .copyright {
+      font-size: 20px;
+    }
+  }
+}
