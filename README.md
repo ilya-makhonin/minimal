@@ -6,3 +6,5 @@
 ### TODO:
 - [ ] Rewrite styles
 - [ ] Add picrures in footer tabs
+
+This TODO is not important at the moment. **This app is not priority.**
