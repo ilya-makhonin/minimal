@@ -8,8 +8,8 @@ let CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     devtool: 'source-map',
     entry: {
-        vendors: path.join(__dirname, 'src', 'vendors'),
-        app: path.join(__dirname, 'src', 'app')
+        vendors: path.join(__dirname, 'src', 'vendors.js'),
+        app: path.join(__dirname, 'src', 'app.jsx')
     },
     output: {
         path: path.join(__dirname, 'dist'),
@@ -22,11 +22,14 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
                     presets: [
-                        'react',
-                        'es2015',
-                        'stage-0'
+                        '@babel/preset-react',
+                        '@babel/preset-env'
                     ],
-                    plugins: ['react-html-attrs', 'transform-decorators-legacy']
+                    plugins: [ 
+                        '@babel/plugin-proposal-decorators',
+                        '@babel/plugin-proposal-class-properties',
+                        'react-html-attrs'
+                    ]
                 }
             },
             {
