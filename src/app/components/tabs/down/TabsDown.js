@@ -1,13 +1,13 @@
 import React from 'react';
-import ListTabs from './ListTabs';
+import ListTabs from '../ListTabs';
 import TabDown from './TabDown';
 
-import apple from './../../../images/down_banner/tabs/apple.png';
-import basket from './../../../images/down_banner/tabs/basket.png';
-import lock from './../../../images/down_banner/tabs/lock.png';
-import power from './../../../images/down_banner/tabs/power.png';
-import search from './../../../images/down_banner/tabs/search.png';
-import star from './../../../images/down_banner/tabs/star.png';
+import apple from '../../../images/down_banner/tabs/apple.png';
+import basket from '../../../images/down_banner/tabs/basket.png';
+import lock from '../../../images/down_banner/tabs/lock.png';
+import power from '../../../images/down_banner/tabs/power.png';
+import search from '../../../images/down_banner/tabs/search.png';
+import star from '../../../images/down_banner/tabs/star.png';
 
 import comp from './../../../images/down_banner/comp.png';
 

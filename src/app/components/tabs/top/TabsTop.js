@@ -1,12 +1,12 @@
 import React from 'react';
 import TabTop from './TabTop';
-import ListTabs from './ListTabs';
+import ListTabs from '../ListTabs';
 
-import mac from './../../../images/top_banner/tabs/mac.png';
-import phone from './../../../images/top_banner/tabs/phone.png';
-import pad from './../../../images/top_banner/tabs/pad.png';
+import mac from '../../../images/top_banner/tabs/mac.png';
+import phone from '../../../images/top_banner/tabs/phone.png';
+import pad from '../../../images/top_banner/tabs/pad.png';
 
-import iphone from './../../../images/top_banner/iphone.png';
+import iphone from '../../../images/top_banner/iphone.png';
 
 export default class TabsTop extends React.Component {
     render() {

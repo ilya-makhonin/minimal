@@ -1,7 +1,7 @@
 import React from 'react';
 
-import basket from './../../../images/top_banner/basket.png';
-import world from './../../../images/top_banner/world.png';
+import basket from '../../../images/top_banner/basket.png';
+import world from '../../../images/top_banner/world.png';
 
 export default class TabTop extends React.Component {
     render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import shop from './../../../images/down_banner/shop_icon.png';
+import shop from '../../../images/down_banner/shop_icon.png';
 
 export default class TabDown extends React.Component {
     render() {
