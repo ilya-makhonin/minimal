@@ -2,9 +2,10 @@ import React from 'react';
 import MenuItem from './MenuItem';
 import { items } from './items';
 
+
 export default class Menu extends React.Component {
-    constructor() {
-        super(...arguments);
+    constructor(props) {
+        super(props);
         this.items = items;
         this.menuItems = [];
     }
