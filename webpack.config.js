@@ -2,8 +2,9 @@ let path = require('path');
 let webpack = require('webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-let CleanWebpackPlugin = require('clean-webpack-plugin');
-let CopyWebpackPlugin = require('copy-webpack-plugin');
+// let CleanWebpackPlugin = require('clean-webpack-plugin');
+// let CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
     devtool: 'source-map',
@@ -92,7 +93,6 @@ module.exports = {
             server: {
                 baseDir: ['dist']
             }
-        }),
-        new CleanWebpackPlugin(['dist'])
+        })
     ]
 };
