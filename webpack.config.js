@@ -2,7 +2,8 @@ let path = require('path');
 let webpack = require('webpack');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-// let CleanWebpackPlugin = require('clean-webpack-plugin');
+
+//let CleanWebpackPlugin = require('clean-webpack-plugin');
 // let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
@@ -17,18 +18,24 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
-        loaders: [{
+        rules: [{
                 test: /\.jsx?$/,
                 exclude: /node_modules|bower_components/,
                 loader: 'babel-loader',
                 query: {
                     presets: [
-                        '@babel/preset-react',
-                        '@babel/preset-env'
+                        '@babel/preset-env',
+                        '@babel/preset-react'
                     ],
                     plugins: [ 
-                        '@babel/plugin-proposal-decorators',
-                        '@babel/plugin-proposal-class-properties',
+                        [ 
+                            '@babel/plugin-proposal-decorators', 
+                            { 'legacy': true } 
+                        ],
+                        [ 
+                            '@babel/plugin-proposal-class-properties', 
+                            { 'loose': true } 
+                        ],
                         'react-html-attrs'
                     ]
                 }
@@ -79,10 +86,9 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx', '.sass', '.css']
+        extensions: [ '.js', '.jsx', '.sass', '.css' ]
     },
     plugins: [
-        new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html'),
             filename: path.join(__dirname, 'dist', 'index.html')
@@ -91,7 +97,7 @@ module.exports = {
             host: 'localhost',
             port: 3000,
             server: {
-                baseDir: ['dist']
+                baseDir: 'dist' 
             }
         })
     ]
