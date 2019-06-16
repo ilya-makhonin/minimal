@@ -1,4 +1,5 @@
 import React from 'react';
+
 import TabTop from './TabTop';
 import ListTabs from '../ListTabs';
 
@@ -6,6 +7,8 @@ import mac from '../../../images/top_banner/tabs/mac.png';
 import phone from '../../../images/top_banner/tabs/phone.png';
 import pad from '../../../images/top_banner/tabs/pad.png';
 import iphone from '../../../images/top_banner/iphone.png';
+import padPic from '../../../images/new_image/minimal_tab_pad.png';
+import pc from '../../../images/new_image/minimal_tab_pc.png';
 
 
 export default function(props) {
@@ -26,9 +29,9 @@ export default function(props) {
                 <ListTabs icon={mac} className="list_tab_top"/>
             </ul>
             <div className="wrapperTabsTopContent">
-                <TabTop className="content_tab_top active_tab_top" image={iphone}/>
-                <TabTop className="content_tab_top" image="#"/>
-                <TabTop className="content_tab_top" image="#"/>
+                <TabTop className="content_tab_top active_tab_top" image={iphone} />
+                <TabTop className="content_tab_top" image={padPic} />
+                <TabTop className="content_tab_top" image={pc} />
             </div>
         </section>
     );

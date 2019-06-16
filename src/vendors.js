@@ -1,5 +1,2 @@
-// import 'bootstrap/dist/css/bootstrap.css';
-// import 'bootstrap/dist/css/bootstrap-theme.css';
-// import 'font-awesome/css/font-awesome.css';
-
+import 'script-loader!jquery/dist/jquery';
 import './app/styles/main.scss';
