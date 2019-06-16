@@ -4,5 +4,6 @@ bower_components/
 dist/
 build/
 bundle/
+config.*
 package-lock.json
 todo.txt 
